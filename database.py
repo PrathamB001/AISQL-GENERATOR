@@ -24,10 +24,10 @@ def get_engine_for_db(database_name=None):
     )
     try:
         engine = create_engine(db_url, pool_pre_ping=True, echo=False)
-        logging.debug(f"✅ Engine created for DB: {database_name or 'no specific DB'}")
+        logging.debug(f" Engine created for DB: {database_name or 'no specific DB'}")
         return engine
     except Exception as e:
-        logging.error(f"❌ Error creating engine: {e}")
+        logging.error(f" Error creating engine: {e}")
         raise
 
 
@@ -35,9 +35,9 @@ def test_connection():
     """Check if database connection works."""
     try:
         with get_engine_for_db(MYSQL_DATABASE).connect() as connection:
-            logging.info("✅ Database connected successfully.")
+            logging.info(" Database connected successfully.")
     except Exception as e:
-        logging.error(f"❌ Connection failed: {e}")
+        logging.error(f" Connection failed: {e}")
         raise
 
 
@@ -50,7 +50,7 @@ def list_databases():
             databases = [row[0] for row in result.fetchall()]
         return databases
     except Exception as e:
-        logging.error(f"❌ Error listing databases: {e}")
+        logging.error(f" Error listing databases: {e}")
         return []
 
 
@@ -63,7 +63,7 @@ def list_tables(database_name):
             tables = [row[0] for row in result.fetchall()]
         return tables
     except Exception as e:
-        logging.error(f"❌ Error listing tables for {database_name}: {e}")
+        logging.error(f" Error listing tables for {database_name}: {e}")
         return []
 
 
@@ -77,7 +77,7 @@ def list_columns(database_name, table_name):
             columns = [row[0] for row in result.fetchall()]
         return columns
     except Exception as e:
-        logging.error(f"❌ Error listing columns for {database_name}.{table_name}: {e}")
+        logging.error(f" Error listing columns for {database_name}.{table_name}: {e}")
         return []
 
 
@@ -101,11 +101,11 @@ def get_schema():
         return schema_dict
 
     except Exception as e:
-        logging.error(f"❌ Error retrieving schema: {e}")
+        logging.error(f" Error retrieving schema: {e}")
         return {}
 
 
-# ✅ Test manually
+#  Test manually
 if __name__ == "__main__":
     test_connection()
     print("Databases:", list_databases())
