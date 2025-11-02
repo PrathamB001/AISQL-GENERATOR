@@ -43,7 +43,16 @@ ai-sql-assistant/
 ├── .env                   # Secrets – GROQ_API_KEY, MySQL credentials (never commit!)
 ├── requirements.txt       # Pip dependencies (FastAPI, Streamlit, Groq, SQLAlchemy, …)
 └── README.md              # You are here!
-
+```
 
 Installation & Setup
 1. Clone the Repository
+```bash
+git clone https://github.com/<your-username>/ai-sql-assistant.git
+cd ai-sql-assistant
+```
+2. Create and Activate Virtual Environment
+python -m venv venv
+source venv/bin/activate       # Linux / macOS
+venv\Scripts\activate          # Windows
+   
