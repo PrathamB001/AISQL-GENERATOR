@@ -52,7 +52,56 @@ git clone https://github.com/<your-username>/ai-sql-assistant.git
 cd ai-sql-assistant
 ```
 2. Create and Activate Virtual Environment
+```bash
 python -m venv venv
 source venv/bin/activate       # Linux / macOS
 venv\Scripts\activate          # Windows
-   
+```
+3. Install Dependencies
+```bash
+pip install -r requirements.txt
+```   
+
+4. Configure Environment Variables
+Create a .env file in the root directory:
+```bash
+GROQ_API_KEY=your_groq_api_key_here
+MYSQL_HOST=127.0.0.1
+MYSQL_USER=root
+MYSQL_PASSWORD=root456
+MYSQL_DATABASE=sakila
+MYSQL_PORT=3306
+```   
+
+
+Running the Application
+Step 1 — Start FastAPI Backend
+
+```bash
+uvicorn app:app --reload
+```
+
+Step 2 — Start Streamlit Frontend
+```bash
+streamlit run ui.py
+```
+
+1. Generate SQL from Natural Language2. Execute Query
+
+Run the SQL directly from the Streamlit interface
+View results in an interactive table
+Visualize with charts (bar, pie, etc.)
+
+3. Explain Query
+Click “Explain SQL Query” to get a plain English summary
+
+License
+MIT License
+Free for personal and educational use.
+
+Contributing
+Contributions are welcome! Feel free to:
+
+Open issues
+Submit pull requests
+Improve documentation
