@@ -33,9 +33,6 @@ It converts **natural language queries** into optimized **MySQL commands**, exec
 
 ## Project Structure
 
-<details>
-<summary>Click to expand project structure</summary>
-
 ```bash
 ai-sql-assistant/
 │
@@ -50,31 +47,3 @@ ai-sql-assistant/
 
 Installation & Setup
 1. Clone the Repository
-bashgit clone https://github.com/<your-username>/ai-sql-assistant.git
-cd ai-sql-assistant
-2. Create and Activate Virtual Environment
-bashpython -m venv venv
-source venv/bin/activate       # Linux / macOS
-venv\Scripts\activate          # Windows
-3. Install Dependencies
-bashpip install -r requirements.txt
-4. Configure Environment Variables
-Create a .env file in the root directory:
-envGROQ_API_KEY=your_groq_api_key_here
-MYSQL_HOST=127.0.0.1
-MYSQL_USER=root
-MYSQL_PASSWORD=root456
-MYSQL_DATABASE=sakila
-MYSQL_PORT=3306
-
-Note: Ensure your MySQL server is running and accessible with the above credentials.
-
-
-Running the Application
-Step 1 — Start FastAPI Backend
-bashuvicorn app:app --reload
-API available at: http://127.0.0.1:8000
-Step 2 — Start Streamlit Frontend
-In a new terminal:
-bashstreamlit run ui.py
-Web app opens at: http://localhost:8501
