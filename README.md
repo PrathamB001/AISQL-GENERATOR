@@ -34,7 +34,7 @@ It converts **natural language queries** into optimized **MySQL commands**, exec
 ## Project Structure
 
 <details>
-<summary>Click to expand</summary>
+<summary>Click to expand project structure</summary>
 
 ```bash
 ai-sql-assistant/
@@ -46,7 +46,6 @@ ai-sql-assistant/
 ├── .env                   # Secrets – GROQ_API_KEY, MySQL credentials (never commit!)
 ├── requirements.txt       # Pip dependencies (FastAPI, Streamlit, Groq, SQLAlchemy, …)
 └── README.md              # You are here!
-
 
 
 
