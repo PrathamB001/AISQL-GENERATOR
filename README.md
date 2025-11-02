@@ -96,6 +96,7 @@ Visualize with charts (bar, pie, etc.)
 Click “Explain SQL Query” to get a plain English summary
 
 License
+
 MIT License
 Free for personal and educational use.
 
@@ -103,5 +104,7 @@ Contributing
 Contributions are welcome! Feel free to:
 
 Open issues
+
 Submit pull requests
+
 Improve documentation
